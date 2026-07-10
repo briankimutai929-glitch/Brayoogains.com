@@ -1,4 +1,5 @@
-app.use("/api/auth", authRoutes);const db = require("./config/database");const express = require("express");
+app.use("/api/auth", authRoutes);const db = require("./config/database");
+const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 
