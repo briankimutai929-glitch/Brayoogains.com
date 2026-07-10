@@ -10,7 +10,7 @@ const profileRoutes = require("./routes/profile");
 // Middleware
 app.use(cors());
 app.use(express.json());
-
+app.use("/api/profile", profileRoutes);
 // Home route
 app.get("/", (req, res) => {
   res.json({
