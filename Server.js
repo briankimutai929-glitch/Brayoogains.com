@@ -1,3 +1,4 @@
+const serviceRoutes = require("./routes/services");
 const db = require("./config/database");
 const express = require("express");
 const cors = require("cors");
@@ -18,11 +19,10 @@ app.get("/", (req, res) => {
     message: "Welcome to SMM Panel API",
     version: "1.0.0"
   });
-});
-
+})
 // Server
 const PORT = process.env.PORT || 3000;
-
+app.use("/api/services", serviceRoutes);
 app.listen(PORT, () => {
   console.log(`SMM Panel is running on port ${PORT}`);
 });
